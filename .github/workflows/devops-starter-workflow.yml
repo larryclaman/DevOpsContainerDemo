@@ -77,7 +77,7 @@ jobs:
         docker push ${{ env.REGISTRYNAME }}.azurecr.io/${{ env.IMAGENAME }}:${{ github.sha }}
 
   deploy:
-    name: Deploy application to AKS
+    name: Deploy application to App Service
     needs: build
     runs-on: ubuntu-latest
     steps:
